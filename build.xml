@@ -25,8 +25,8 @@
     <fileset dir="${tcserver.home}/bin">
       <include name="*.jar"/>
     </fileset>
-    <pathelement location="${tcserver.home}/lib"/>
-    <fileset dir="${tcserver.home}/lib">
+    <pathelement location="${tcserver.home}/bin"/>
+    <fileset dir="${tcserver.home}/bin">
       <include name="*.jar"/>
     </fileset>
   </path>
