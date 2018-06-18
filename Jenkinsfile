@@ -3,7 +3,7 @@ pipeline {
          stages {
                stage('build') {
                       steps {
-                            sh 'ant all'
+                            sh -c 'ant all'
                       }
                 }
          }
