@@ -5,7 +5,7 @@ pipeline {
 		stage('build')
     {
       			steps {
-        			sh -c 'echo "hello world"'
+        			echo $PATH
      			 }
 		}
 	    }
