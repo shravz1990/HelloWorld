@@ -4,7 +4,7 @@ pipeline {
 
 		stage('build') {
       			steps {
-        			echo "has to be a build step"
+        			sh 'ant -f build.xml -v'
      			 }
 		}
 	    }
