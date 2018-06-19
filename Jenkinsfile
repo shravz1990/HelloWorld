@@ -5,7 +5,7 @@ pipeline {
 		stage('build')
     {
       			steps {
-        			echo $PATH
+        			echo ${env.PATH}
      			 }
 		}
 	    }
