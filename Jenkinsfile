@@ -1,10 +1,6 @@
 pipeline {
      agent any
 
-     environment {
-        DISABLE_AUTH = 'true'
-        DB_ENGINE    = 'sqlite'
-     }
       stages {
 
 		    stage('build')
@@ -14,4 +10,10 @@ pipeline {
      			  }
 		    }
 	    }
+
+      post {
+        always {
+          archive 'dist/*.war'
+        }
+      }
 }
