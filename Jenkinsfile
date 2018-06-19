@@ -10,7 +10,7 @@ pipeline {
 		    stage('build')
         {
       			steps {
-        		 sh 'ant all'
+        		 sh 'printenv'
      			  }
 		    }
 	    }
