@@ -10,7 +10,7 @@
   <target name="help">
     <echo>You can use the following targets:</echo>
     <echo> </echo>
-    <echo>  help    : (default) Prints this message </echo>
+    <echo>  help    : (default) Displays this message </echo>
     <echo>  all     : Cleans, compiles, and packages application</echo>
     <echo>  clean   : Deletes work directories</echo>
     <echo>  compile : Compiles servlets into class files</echo>
