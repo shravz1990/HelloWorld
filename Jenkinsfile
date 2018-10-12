@@ -3,17 +3,11 @@ pipeline {
 
       stages {
 
-		    stage('build')
-        {
+		    stage('build'){
       			steps {
         		 sh 'ant all'
      			  }
 		    }
 	    }
 
-      post {
-        always {
-          archiveArtifacts artifacts: 'dist/*.war', fingerprint: true
-        }
-      }
 }
