@@ -1,14 +1,16 @@
 pipeline {
 
-     agent {
-       label 'master'
-     }
+     agent none 
   
 
       stages {
 
 		    stage('build'){
-      			steps {
+      			agent {
+			  label 'master'
+			}
+
+			steps {
         		 sh 'ant all'
      			  }
 		    }
@@ -18,6 +20,5 @@ pipeline {
              archive ‘dist/*.war’
           }
       }
-
 
 }
