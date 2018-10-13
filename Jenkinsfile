@@ -1,5 +1,8 @@
 pipeline {
-     agent any
+     agent{
+       label master
+     }
+  
 
       stages {
 
@@ -9,5 +12,11 @@ pipeline {
      			  }
 		    }
 	    }
+     post {
+         always {
+             archive ‘dist/*.war’
+          }
+      }
+
 
 }
