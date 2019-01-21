@@ -1,14 +1,19 @@
 pipeline {
-
+  
      agent any
 
       stages {
 
-		    stage('build'){
-			steps {
-			 sh 'echo building'
-        		 sh 'ant all'
-     			  }
-		    }
-	    }
+                    stage('build'){
+                        steps {
+                         sh 'ant all'
+                          }
+                    }
+            }
+      post {
+
+        always {
+           archiveArtifacts artifacts: 'dist/*.war', fingerprint: true
+        }
+     }
 }
